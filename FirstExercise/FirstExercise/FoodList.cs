@@ -18,17 +18,18 @@ namespace FirstExercise
                     return;
                 }
             }
-            foodToAdd.amount = amount;
-            this.Add(foodToAdd);
+
+            Food foodToAddCopy = (Food) foodToAdd.Clone();
+            foodToAddCopy.amount = amount;
+            this.Add(foodToAddCopy);
         }
 
-        public void removeProduct(Food foodToAdd, int amount)
+        public void removeProduct(Food foodToRemove, int amount)
         {
             foreach (Food f in this)
             {
-                if (f.name == foodToAdd.name)
+                if (f.name == foodToRemove.name)
                 {
-                    //exception about negative amount
                     f.amount -= amount;
                     if(f.amount == 0)
                     {
@@ -37,8 +38,6 @@ namespace FirstExercise
                     return;
                 }
             }
-            foodToAdd.amount = amount;
-            this.Add(foodToAdd);
         }
     }
 }

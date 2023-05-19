@@ -37,6 +37,7 @@
             this.colprice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colamount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.foodAmountEdit = new DevExpress.XtraEditors.SpinEdit();
             this.foodNameEdit = new DevExpress.XtraEditors.TextEdit();
@@ -47,6 +48,7 @@
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -60,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -86,6 +89,7 @@
             this.colamount});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // colname
             // 
@@ -117,6 +121,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dropDownButton1);
             this.layoutControl1.Controls.Add(this.splitter1);
             this.layoutControl1.Controls.Add(this.foodAmountEdit);
             this.layoutControl1.Controls.Add(this.foodNameEdit);
@@ -129,6 +134,15 @@
             this.layoutControl1.Size = new System.Drawing.Size(362, 121);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dropDownButton1
+            // 
+            this.dropDownButton1.Location = new System.Drawing.Point(183, 60);
+            this.dropDownButton1.Name = "dropDownButton1";
+            this.dropDownButton1.Size = new System.Drawing.Size(167, 22);
+            this.dropDownButton1.StyleController = this.layoutControl1;
+            this.dropDownButton1.TabIndex = 9;
+            this.dropDownButton1.Text = "dropDownButton1";
             // 
             // splitter1
             // 
@@ -180,7 +194,8 @@
             this.layoutControlItem2,
             this.simpleSeparator1,
             this.emptySpaceItem1,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(362, 121);
             this.Root.TextVisible = false;
@@ -216,7 +231,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(342, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(171, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -227,6 +242,15 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(342, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.dropDownButton1;
+            this.layoutControlItem4.Location = new System.Drawing.Point(171, 48);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(171, 26);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
             // BuyingForm
             // 
@@ -250,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,5 +299,7 @@
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

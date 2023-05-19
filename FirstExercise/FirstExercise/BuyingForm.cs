@@ -15,14 +15,14 @@ namespace FirstExercise
         public BuyingForm()
         {
             InitializeComponent();
-            gridControl1.DataSource = Form1.instance.userStats.availableFood ;
+            gridControl1.DataSource = Stats.availableFood ;
             foodAmountEdit.Properties.Mask.EditMask = "f0";
         }
 
         private void buyButtonClick(object sender, EventArgs e)
         {
-            var availableFood = Form1.instance.userStats.availableFood;
-            var boughtFood = Form1.instance.userStats.boughtFood;
+            var availableFood = Stats.availableFood;
+            var boughtFood = Stats.boughtFood;
             bool doesProductExist = false;
             foreach(Food f in availableFood)
             {
@@ -36,7 +36,7 @@ namespace FirstExercise
                     else if (f.amount < foodAmountEdit.Value)
                     {
                         MessageBox.Show("Too big amount! We don't have that many in our stock.");
-                    } else if (f.price * Decimal.ToInt16(foodAmountEdit.Value) > Form1.instance.userStats.MoneyAmount)
+                    } else if (f.price * Decimal.ToInt16(foodAmountEdit.Value) > Stats.MoneyAmount)
                     {
                         MessageBox.Show("That's too expensive for you, you poor shmock.");
                     } else
@@ -44,7 +44,7 @@ namespace FirstExercise
                         int amount = Decimal.ToInt16(foodAmountEdit.Value);
                         availableFood.removeProduct(f, amount);
                         boughtFood.addProduct(f, amount);
-                        Form1.instance.userStats.MoneyAmount -= f.price * amount;
+                        Stats.MoneyAmount -= f.price * amount;
                         Form1.instance.updateStats();
                         this.Close();
                         return;
